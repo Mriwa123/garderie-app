@@ -15,7 +15,14 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-kids navbar-dark sticky-top">
       <div className="container">
         <a className="navbar-brand d-flex align-items-center" href="#accueil">
-          <span className="me-2" style={{ fontSize: '2rem' }}>⭐</span>
+          <img
+            src="/images/logo.png"
+            alt="Logo Petits Anges"
+            width="46"
+            height="46"
+            className="me-2 rounded-circle"
+            style={{ objectFit: 'cover', background: '#fff' }}
+          />
           {nom}
         </a>
         <button className="navbar-toggler" type="button"
@@ -27,12 +34,4 @@ export default function Navbar() {
             <li className="nav-item"><a className="nav-link" href="#accueil">Accueil</a></li>
             <li className="nav-item"><a className="nav-link" href="#apropos">À propos</a></li>
             <li className="nav-item"><a className="nav-link" href="#services">Programmes</a></li>
-            <li className="nav-item"><a className="nav-link" href="#activites">Activités</a></li>
-            <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
-          </ul>
-          <a className="btn btn-yellow" href="#contact">Inscription <i className="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-    </nav>
-  );
-}
+            <li className="nav-item"><a className="nav-link"
