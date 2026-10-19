@@ -12,25 +12,26 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="bg-light py-5">
+    <section className="hero" id="accueil">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-md-6 mb-4 mb-md-0">
-            <h1 className="display-4 fw-bold">
-              Bienvenue chez {garderie ? garderie.nom : '...'}
+          <div className="col-lg-6 mb-5 mb-lg-0">
+            <span className="badge rounded-pill text-bg-light mb-3 px-3 py-2">
+              <i className="bi bi-heart-fill text-danger me-1"></i> Garderie agréée
+            </span>
+            <h1 className="display-4">
+              Bienvenue chez <span className="highlight">{garderie ? garderie.nom : '...'}</span>
             </h1>
-            <p className="lead">
+            <p className="lead my-4">
               {garderie ? garderie.description : 'Chargement...'}
             </p>
-            <a href="#services" className="btn btn-primary btn-lg">
-              Découvrir nos services
-            </a>
+            <a href="#services" className="btn btn-brand btn-lg">Nos services</a>
           </div>
-          <div className="col-md-6">
+          <div className="col-lg-6">
             <img
               src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800"
               alt="Enfants qui jouent"
-              className="img-fluid rounded shadow"
+              className="img-fluid"
             />
           </div>
         </div>

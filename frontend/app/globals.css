@@ -1,49 +1,42 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #ff7a59;
+  --primary-dark: #e8643f;
+  --secondary: #4ecdc4;
+  --dark: #2d3047;
+  --soft: #fff8f0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--dark); }
+section { scroll-margin-top: 70px; }
 
-html {
-  height: 100%;
-}
+.navbar-custom { background: #fff; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); }
+.navbar-custom .nav-link { color: var(--dark); font-weight: 600; }
+.navbar-custom .nav-link:hover { color: var(--primary); }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.btn-brand {
+  background: var(--primary); color: #fff; border: none;
+  border-radius: 50px; padding: 0.8rem 2rem; font-weight: 700; transition: 0.3s;
 }
+.btn-brand:hover { background: var(--primary-dark); color: #fff; transform: translateY(-2px); }
 
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.hero { background: linear-gradient(135deg, #fff8f0 0%, #ffe3d3 100%); padding: 5rem 0; }
+.hero h1 { font-weight: 800; color: var(--dark); }
+.hero .highlight { color: var(--primary); }
+.hero img { border-radius: 30px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
+
+.section-title { font-weight: 800; text-align: center; margin-bottom: 0.5rem; }
+.section-sub { text-align: center; color: #6c757d; margin-bottom: 3rem; }
+
+.service-card {
+  border: none; border-radius: 20px; padding: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06); transition: 0.3s;
 }
+.service-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.icon-circle {
+  width: 70px; height: 70px; border-radius: 50%;
+  background: var(--soft); color: var(--primary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; margin: 0 auto 1rem;
 }
