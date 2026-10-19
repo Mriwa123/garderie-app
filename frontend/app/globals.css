@@ -1,48 +1,66 @@
 :root {
-  --primary: #ff7a59;
-  --primary-dark: #e8643f;
-  --secondary: #4ecdc4;
+  --blue: #1e88e5;
+  --blue-dark: #1565c0;
+  --navy: #1f3a8a;
+  --yellow: #ffc928;
+  --pink: #ff5c9d;
+  --green: #7ed957;
+  --sky: #eaf4ff;
   --dark: #2d3047;
-  --soft: #fff8f0;
 }
 
 html { scroll-behavior: smooth; }
-body { margin: 0; color: var(--dark); }
-section { scroll-margin-top: 70px; }
+body { margin: 0; color: var(--dark); background: #fff; overflow-x: hidden; }
+section { scroll-margin-top: 80px; }
 
-.navbar-custom { background: #fff; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); }
-.navbar-custom .nav-link { color: var(--dark); font-weight: 600; }
-.navbar-custom .nav-link:hover { color: var(--primary); }
+/* Navbar */
+.navbar-kids { background: var(--blue); padding: 0.8rem 0; }
+.navbar-kids .nav-link { color: #fff; font-weight: 500; padding: 0.4rem 1rem; }
+.navbar-kids .nav-link:hover { color: var(--yellow); }
+.navbar-kids .navbar-brand { color: #fff; font-weight: 700; font-size: 1.5rem; }
 
-.btn-brand {
-  background: var(--primary); color: #fff; border: none;
-  border-radius: 50px; padding: 0.8rem 2rem; font-weight: 700; transition: 0.3s;
+/* Boutons */
+.btn-yellow {
+  background: var(--yellow); color: var(--navy); border: none; border-radius: 50px;
+  padding: 0.7rem 1.8rem; font-weight: 600; transition: 0.3s;
+  box-shadow: 0 6px 15px rgba(255, 201, 40, 0.5);
 }
-.btn-brand:hover { background: var(--primary-dark); color: #fff; transform: translateY(-2px); }
-
-.hero { background: linear-gradient(135deg, #fff8f0 0%, #ffe3d3 100%); padding: 5rem 0; }
-.hero h1 { font-weight: 800; color: var(--dark); }
-.hero .highlight { color: var(--primary); }
-.hero img { border-radius: 30px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
-
-.section-title { font-weight: 800; text-align: center; margin-bottom: 0.5rem; }
-.section-sub { text-align: center; color: #6c757d; margin-bottom: 3rem; }
-
-.service-card {
-  border: none; border-radius: 20px; padding: 1rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06); transition: 0.3s;
+.btn-yellow:hover { background: #ffb800; color: var(--navy); transform: translateY(-3px); }
+.btn-outline-blue {
+  background: #fff; color: var(--blue-dark); border: 2px solid var(--blue); border-radius: 50px;
+  padding: 0.7rem 1.8rem; font-weight: 600; transition: 0.3s;
 }
-.service-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); }
+.btn-outline-blue:hover { background: var(--blue); color: #fff; }
 
-.icon-circle {
-  width: 70px; height: 70px; border-radius: 50%;
-  background: var(--soft); color: var(--primary);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem; margin: 0 auto 1rem;
+/* Hero */
+.hero-kids {
+  background: var(--blue); position: relative; padding: 4rem 0 7rem; overflow: hidden;
 }
-.bg-soft { background: var(--soft); }
-.stat h3 { color: var(--primary); font-weight: 800; }
+.hero-text {
+  background: #fff; border-radius: 0 60px 60px 0; padding: 3rem 3rem 3rem 4rem;
+  margin-left: -2rem;
+}
+.hero-text h1 { font-weight: 700; font-size: 3rem; line-height: 1.2; color: var(--navy); }
+.c-yellow { color: var(--yellow); }
+.c-pink { color: var(--pink); }
+.hero-img {
+  border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
+  width: 100%; max-height: 420px; object-fit: cover; border: 8px solid #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+.wave-bottom { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; }
 
-.footer { background: var(--dark); color: #cfd2e0; padding: 3rem 0 1rem; }
-.footer a { color: #cfd2e0; text-decoration: none; }
-.footer a:hover { color: var(--primary); }
+/* Barre avantages */
+.features-bar {
+  background: #fff; border-radius: 25px; padding: 1.5rem; margin-top: -4rem; position: relative; z-index: 2;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+.feature-item { text-align: center; padding: 0.5rem 1rem; }
+.feature-item i { font-size: 2rem; }
+.feature-item h6 { font-weight: 600; margin: 0.5rem 0 0.2rem; color: var(--navy); }
+.feature-item small { color: #6c757d; }
+
+/* Titres */
+.title-kids { font-weight: 700; text-align: center; color: var(--navy); }
+.title-kids::before, .title-kids::after { content: '★'; color: var(--yellow); margin: 0 0.6rem; font-size: 1.2rem; }
+.sub-kids { text-align: center; color: #6c757d; margin-bottom: 2.5rem; }
