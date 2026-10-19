@@ -26,13 +26,15 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="menu">
-          <ul className="navbar-nav ms-auto align-items-lg-center">
-            <li className="nav-item"><a className="nav-link" href="#accueil">Accueil</a></li>
-            <li className="nav-item"><a className="nav-link" href="#services">Services</a></li>
-            <li className="nav-item ms-lg-3">
-              <a className="btn btn-brand btn-sm" href="#services">Découvrir</a>
-            </li>
-          </ul>
+    <ul className="navbar-nav ms-auto align-items-lg-center">
+  <li className="nav-item"><a className="nav-link" href="#accueil">Accueil</a></li>
+  <li className="nav-item"><a className="nav-link" href="#apropos">À propos</a></li>
+  <li className="nav-item"><a className="nav-link" href="#services">Services</a></li>
+  <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+  <li className="nav-item ms-lg-3">
+    <a className="btn btn-brand btn-sm" href="#contact">Inscrire mon enfant</a>
+  </li>
+</ul>
         </div>
       </div>
     </nav>
