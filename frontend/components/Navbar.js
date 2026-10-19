@@ -1,4 +1,16 @@
+'use client';
+import { useEffect, useState } from 'react';
+
 export default function Navbar() {
+  const [nom, setNom] = useState('Petits Anges');
+
+  useEffect(() => {
+    fetch('http://localhost:5000/api/garderie')
+      .then((r) => r.json())
+      .then((g) => setNom(g.nom))
+      .catch(console.error);
+  }, []);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container">
@@ -10,7 +22,7 @@ export default function Navbar() {
             height="40"
             className="me-2"
           />
-          Petits Anges
+          {nom}
         </a>
         <button
           className="navbar-toggler"
