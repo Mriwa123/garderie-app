@@ -12,7 +12,7 @@ export default function Activities() {
   const [activites, setActivites] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/activites')
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/activites`)
       .then((r) => r.json()).then(setActivites).catch(console.error);
   }, []);
 

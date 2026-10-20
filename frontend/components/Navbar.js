@@ -5,7 +5,7 @@ export default function Navbar() {
   const [nom, setNom] = useState('Petits Anges');
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/garderie')
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/garderie`)
       .then((r) => r.json())
       .then((g) => setNom(g.nom))
       .catch(console.error);

@@ -12,7 +12,7 @@ export default function Services() {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/services')
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/services`)
       .then((r) => r.json()).then(setServices).catch(console.error);
   }, []);
 
