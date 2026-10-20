@@ -5,7 +5,7 @@ export default function Hero() {
   const [garderie, setGarderie] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/garderie')
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/garderie`)
       .then((r) => r.json())
       .then(setGarderie)
       .catch(console.error);
@@ -35,11 +35,11 @@ export default function Hero() {
           </div>
           <div className="col-lg-6">
             <img
-  src="/images/hero.jpg"
-  alt="Notre garderie"
-  className="hero-img"
-  style={{ objectFit: 'cover', maxHeight: 420 }}
-/>
+              src="/images/hero.jpg"
+              alt="Notre garderie"
+              className="hero-img"
+              style={{ objectFit: 'cover', maxHeight: 420 }}
+            />
           </div>
         </div>
       </div>
